@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlaySphere - Ignite Your Child's Learning Adventure!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .float { animation: float 3s ease-in-out infinite; }
+        .custom-shape-divider-bottom-1629644476 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .custom-shape-divider-bottom-1629644476 svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        .custom-shape-divider-bottom-1629644476 .shape-fill {
+            fill: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="font-['Poppins',sans-serif] bg-gradient-to-b from-purple-100 via-blue-100 to-green-100 min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white bg-opacity-90 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-4xl font-bold text-indigo-600">PlaySphere</div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="text-indigo-600 hover:text-indigo-800 transition duration-300">Home</a></li>
+                    <li><a href="#features" class="text-indigo-600 hover:text-indigo-800 transition duration-300">Features</a></li>
+                    <li><a href="#age-groups" class="text-indigo-600 hover:text-indigo-800 transition duration-300">Age Groups</a></li>
+                    <li><a href="#testimonials" class="text-indigo-600 hover:text-indigo-800 transition duration-300">Testimonials</a></li>
+                    <li><a href="#pricing" class="text-indigo-600 hover:text-indigo-800 transition duration-300">Pricing</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-indigo-600" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white" id="mobile-menu">
+            <ul class="px-4 py-2">
+                <li><a href="#home" class="block py-2 text-indigo-600">Home</a></li>
+                <li><a href="#features" class="block py-2 text-indigo-600">Features</a></li>
+                <li><a href="#age-groups" class="block py-2 text-indigo-600">Age Groups</a></li>
+                <li><a href="#testimonials" class="block py-2 text-indigo-600">Testimonials</a></li>
+                <li><a href="#pricing" class="block py-2 text-indigo-600">Pricing</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-24 relative overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-5xl md:text-7xl font-bold text-indigo-800 mb-6">Learn, Play, Grow!</h1>
+                <p class="text-xl text-gray-700 mb-8">Embark on an exciting educational journey with PlaySphere - where learning meets adventure!</p>
+                <a href="#" class="bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-110 inline-block">
+                    Start Free Trial
+                </a>
+            </div>
+            <div class="md:w-1/2 relative">
+                <img src="hero_img.jpg" alt="" class="rounded-lg shadow-2xl float">
+                <div class="absolute -bottom-10 -left-10 bg-blue-500 text-white p-4 rounded-full transform rotate-12 float">
+                    <span class="text-2xl font-bold">Fun!</span>
+                </div>
+                <div class="absolute -top-10 -right-10 bg-green-500 text-white p-4 rounded-full transform -rotate-12 float">
+                    <span class="text-2xl font-bold">Learn!</span>
+                </div>
+            </div>
+        </div>
+        <div class="custom-shape-divider-bottom-1629644476">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-indigo-800 mb-12">Unleash the Power of Interactive Learning</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-purple-100 rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-purple-600 text-4xl mb-4">🧠</div>
+                    <h3 class="text-2xl font-bold text-purple-800 mb-4">Adaptive Learning</h3>
+                    <p class="text-gray-700">Our AI-powered system adapts to your child's learning pace, ensuring personalized education.</p>
+                </div>
+                <div class="bg-blue-100 rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-blue-600 text-4xl mb-4">🎮</div>
+                    <h3 class="text-2xl font-bold text-blue-800 mb-4">Gamified Lessons</h3>
+                    <p class="text-gray-700">Turn learning into an adventure with our engaging, game-based lessons and challenges.</p>
+                </div>
+                <div class="bg-green-100 rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-green-600 text-4xl mb-4">📊</div>
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">Progress Tracking</h3>
+                    <p class="text-gray-700">Monitor your child's growth with detailed progress reports and insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age Groups Section -->
+    <section id="age-groups" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-indigo-800 mb-12">Learning Adventures for Every Age</h2>
+            <div class="flex flex-wrap justify-center">
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-red-100 rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 h-full">
+                        <h3 class="text-2xl font-bold text-red-600 mb-4">Toddlers (2-4)</h3>
+                        <ul class="text-gray-700 list-disc list-inside">
+                            <li>Colorful shape recognition</li>
+                            <li>Basic number concepts</li>
+                            <li>Interactive storytelling</li>
+                            <li>Simple problem-solving games</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-yellow-100 rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 h-full">
+                        <h3 class="text-2xl font-bold text-yellow-600 mb-4">Kids (5-8)</h3>
+                        <ul class="text-gray-700 list-disc list-inside">
+                            <li>Reading comprehension</li>
+                            <li>Basic math operations</li>
+                            <li>Science experiments</li>
+                            <li>Creative writing prompts</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-blue-100 rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 h-full">
+                        <h3 class="text-2xl font-bold text-blue-600 mb-4">Pre-teens (9-12)</h3>
+                        <ul class="text-gray-700 list-disc list-inside">
+                            <li>Advanced math concepts</li>
+                            <li>Critical thinking challenges</li>
+                            <li>Coding basics</li>
+                            <li>History and geography quests</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-indigo-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-indigo-800 mb-12">Voices of Happy Families</h2>
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://picsum.photos/100/100" alt="Sarah" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-indigo-800">Sarah Thompson</h4>
+                                <p class="text-gray-600">Parent of two</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">"PlaySphere has transformed our homeschooling experience. My kids can't wait for their daily learning adventures!"</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://picsum.photos/100/100" alt="Mr. Johnson" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-indigo-800">Mr. Johnson</h4>
+                                <p class="text-gray-600">Elementary School Teacher</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">"As an educator, I'm impressed by the curriculum alignment and engaging content. It's a valuable tool in my classroom."</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://picsum.photos/100/100" alt="Emily" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-indigo-800">Emily Chen</h4>
+                                <p class="text-gray-600">Mother of a 7-year-old</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">"PlaySphere has boosted my daughter's confidence in math. The games make learning fun and engaging for her."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-indigo-800 mb-12">Choose Your Learning Adventure</h2>
+        <div class="flex flex-wrap justify-center -mx-4">
+            <div class="w-full md:w-1/3 px-4 mb-8">
+                <div class="bg-blue-100 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 text-center">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-4">Basic Explorer</h3>
+                    <div class="text-4xl font-bold text-indigo-600 mb-6">$9.99<span class="text-base font-normal">/month</span></div>
+                    <ul class="text-left mb-8">
+                        <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Access to core subjects</li>
+                        <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Basic progress tracking</li>
+                        <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Limited games and activities</li>
+                    </ul>
+                    <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">Get Started</a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 px-4 mb-8">
+                <div class="bg-purple-100 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 text-center transform scale-105">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-indigo-900 font-bold py-1 px-4 rounded-tl-lg rounded-br-lg">Popular</div>
+                    <h3 class="text-2xl font-bold text-purple-800 mb-4">Super Learner</h3>
+                    <div class="text-4xl font-bold text-indigo-600 mb-6">$19.99<span class="text-base font-normal">/month</span></div>
+                    <ul class="text-left mb-8">
+                        <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Access to all subjects</li>
+                        <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Advanced progress tracking</li>
+                        <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Unlimited games and activities</li>
+                        <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Personalized learning path</li>
+                    </ul>
+                    <a href="#" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">Get Started</a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 px-4 mb-8">
+                <div class="bg-green-100 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 text-center">
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">Family Pack</h3>
+                    <div class="text-4xl font-bold text-indigo-600 mb-6">$29.99<span class="text-base font-normal">/month</span></div>
+                    <ul class="text-left mb-8">
+                        <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> All Super Learner features</li>
+                        <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Up to 4 child accounts</li>
+                        <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Family progress dashboard</li>
+                        <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Priority customer support</li>
+                    </ul>
+                    <a href="#" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-indigo-800 mb-12">How PlaySphere Works</h2>
+        <div class="flex flex-wrap items-center">
+            <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                <img src="footer_img.jpg" alt="PlaySphere in action" class="rounded-lg shadow-xl">
+            </div>
+            <div class="w-full md:w-1/2 md:pl-12">
+                <div class="mb-8">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-500 rounded-full p-2 mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-indigo-800">Personalized Assessment</h3>
+                    </div>
+                    <p class="text-gray-700">We start by understanding your child's current knowledge and learning style.</p>
+                </div>
+                <div class="mb-8">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-500 rounded-full p-2 mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-indigo-800">Customized Learning Path</h3>
+                    </div>
+                    <p class="text-gray-700">Our AI creates a tailored curriculum to address your child's unique needs and goals.</p>
+                </div>
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-500 rounded-full p-2 mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-indigo-800">Interactive Learning</h3>
+                    </div>
+                    <p class="text-gray-700">Engage with our fun, interactive lessons and track progress in real-time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section class="py-20 bg-indigo-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-8">Ready to Start Your Child's Learning Adventure?</h2>
+        <p class="text-xl mb-12">Join thousands of happy families and watch your child's potential unfold!</p>
+        <a href="#" class="bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-110 inline-block">
+            Start Your Free Trial
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-indigo-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+                <h3 class="text-2xl font-bold mb-4">PlaySphere</h3>
+                <p>Igniting curiosity and fostering a love for learning in children around the world.</p>
+            </div>
+            <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+                <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-yellow-400 transition duration-300">Home</a></li>
+                    <li><a href="#" class="hover:text-yellow-400 transition duration-300">Features</a></li>
+                    <li><a href="#" class="hover:text-yellow-400 transition duration-300">Pricing</a></li>
+                    <li><a href="#" class="hover:text-yellow-400 transition duration-300">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+                <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                <p>Email: info@playsphere.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="w-full md:w-1/4 px-4">
+                <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-yellow-400 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                    </a>
+                    <a href="#" class="hover:text-yellow-400 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                    </a>
+                    <a href="#" class="hover:text-yellow-400 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript for mobile menu toggle -->
+<script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+<!-- JavaScript for animations -->
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        gsap.from('.hero h1', {duration: 1, y: 50, opacity: 0, ease: 'power3.out'});
+        gsap.from('.hero p', {duration: 1, y: 50, opacity: 0, ease: 'power3.out', delay: 0.3});
+        gsap.from('.hero a', {duration: 1, y: 50, opacity: 0, ease: 'power3.out', delay: 0.6});
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray('.animate-on-scroll').forEach((element) => {
+            gsap.from(element, {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: element,
+                    start: 'top 80%',
+                    end: 'bottom 20%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
